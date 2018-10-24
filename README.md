@@ -17,6 +17,7 @@
 `docker exec btpanel bt default`
 
 安装完成后以后可以随时使用内置升级,升级到最新版本, 由于面板数据都保存在持久化的卷中, 即使删除容器后重新运行, 原来的面板和网站数据都能得到保留.  
+
 /www文件夹建议保存在volume卷中, /www/wwwroot建议映射到宿主机的目录下,方便上传网站代码等文件  
 如果是非root或者mac的用户,可能会遇到无法映射/wwwroot的问题,请自行把上面的/wwwroot的改成~/wwwroot即可
 
