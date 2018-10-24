@@ -4,7 +4,7 @@ FROM centos:latest
 RUN yum -y update \
     && yum -y install wget \
     && cd /home \
-    && wget -O install.sh http://download.bt.cn/install/install_6.0.sh \
+    && wget -O install.sh http://download.bt.cn/install/install.sh \
     && echo y | bash install.sh
 
 #设置entrypoint和letsencrypt映射到www文件夹下持久化
