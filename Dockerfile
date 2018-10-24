@@ -11,7 +11,7 @@ RUN yum -y update \
 RUN mkdir /www/letsencrypt \
     && ln -s /www/letsencrypt /etc/letsencrypt \
     && echo 'for file in `ls /etc/init.d`' > /entrypoint \
-    && echo 'do if [ -x /etc/init.d/$file ];  then ' >> /entrypoint \
+    && echo 'do if [ -x /etc/init.d/$file ];  then' >> /entrypoint \
     && echo '    /etc/init.d/$file start' >> /entrypoint \
     && echo 'fi done' >> /entrypoint \
     && echo 'bt default' >> /entrypoint \
