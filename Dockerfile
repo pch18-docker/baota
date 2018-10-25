@@ -13,7 +13,7 @@ RUN mkdir /www/letsencrypt \
     && ln -s /www/letsencrypt /etc/letsencrypt \
     && chmod +x /entrypoint.sh
 
-CMD /entrypoint
+CMD /entrypoint.sh
 EXPOSE 80 443 8888
 VOLUME ["/www","/www/wwwroot"]
 
