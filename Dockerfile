@@ -8,16 +8,11 @@ RUN yum -y update \
     && echo y | bash install.sh
 
 #设置entrypoint和letsencrypt映射到www文件夹下持久化
+COPY entrypoint.sh /entrypoint.sh
+
 RUN mkdir /www/letsencrypt \
     && ln -s /www/letsencrypt /etc/letsencrypt \
-    && echo 'for file in `ls /etc/init.d`' > /entrypoint \
-    && echo 'do if [ -x /etc/init.d/$file ];  then ' >> /entrypoint \
-    && echo '    /etc/init.d/$file start' >> /entrypoint \
-    && echo 'fi done' >> /entrypoint \
-    && echo 'crond' >> /entrypoint \
-    && echo 'bt default' >> /entrypoint \
-    && echo 'tail -f /dev/null' >> /entrypoint \
-    && chmod +x /entrypoint
+    && chmod +x /entrypoint.sh
 
 CMD /entrypoint
 EXPOSE 80 443 8888
