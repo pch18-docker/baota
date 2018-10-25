@@ -15,6 +15,7 @@ RUN mkdir /www/letsencrypt \
     && echo '    /etc/init.d/$file start' >> /entrypoint \
     && echo 'fi done' >> /entrypoint \
     && echo 'bt default' >> /entrypoint \
+    && echo 'crond' >> /entrypoint \
     && echo 'tail -f /dev/null' >> /entrypoint \
     && chmod +x /entrypoint
 
