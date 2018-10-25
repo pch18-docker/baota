@@ -9,7 +9,6 @@ RUN yum -y update \
 
 #设置entrypoint和letsencrypt映射到www文件夹下持久化
 COPY entrypoint.sh /entrypoint.sh
-
 RUN mkdir /www/letsencrypt \
     && ln -s /www/letsencrypt /etc/letsencrypt \
     && chmod +x /entrypoint.sh
