@@ -1,4 +1,4 @@
-FROM pch18/baota:base
+FROM pch18/baota:init
 
 RUN cd /home \
     && wget -O install.sh http://download.bt.cn/install/install_6.0.sh \
