@@ -1,4 +1,4 @@
-FROM pch18/btpanel:base
+FROM pch18/baota:base
 
 RUN cd /home \
     && wget -O install.sh http://download.bt.cn/install/install.sh \
