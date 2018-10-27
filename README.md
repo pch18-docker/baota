@@ -19,6 +19,14 @@
 `docker logs -f -t --tail 10 baota`  
 `docker exec baota bt default`
 
+### 版本命名说明  
+`pch18/baota:latest` 或 `pch18/baota` 为最新版本的官方纯净安装的基础上安装nginx,mysql,php 
+`pch18/baota:6.2` 为官方6.2版本纯净安装, 不默认安装nginx,mysql,php等程序
+`pch18/baota:6.2-lnmp` 为官方6.2版本纯净安装的基础上安装nginx,mysql,php
+`pch18/baota:6.2-lnp` 为官方6.2版本纯净安装的基础上安装nginx,php(不内置mysql,用于外置数据库的环境)
+其他版本号同理, 可以在上面运行命令的最后连接上:(版本号)执行
+
+
 安装完成后以后可以随时使用内置升级,升级到最新版本, 由于面板数据都保存在持久化的卷中, 即使删除容器后重新运行, 原来的面板和网站数据都能得到保留.  
 
 /www文件夹建议保存在volume卷中, /www/wwwroot建议映射到宿主机的目录下,方便上传网站代码等文件  
