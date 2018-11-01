@@ -7,10 +7,10 @@
 正常的bridge模式可能会造成网站后台不能获取用户真实ip地址.
 
 ### 通过host模式运行宝塔镜像  
-`docker run -tid --name baota --net=host --restart always -v baota_www:/www -v /wwwroot:/www/wwwroot pch18/baota`
+`docker run -tid --name baota --net=host --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 ### 如果特殊情况不能使用host网络模式, 或者容器运行后不能打开面板页面请删除容器后,使用如下命令以bridge网络模式运行  
-`docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 -p 20:20 -p 21:21 --restart always -v baota_www:/www -v /wwwroot:/www/wwwroot pch18/baota`
+`docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 -p 20:20 -p 21:21 --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 ### 删除容器命令如下  
 `docker stop baota && docker rm baota`
@@ -30,7 +30,7 @@
 安装完成后以后可以随时使用内置升级,升级到最新版本, 由于面板数据都保存在持久化的卷中, 即使删除容器后重新运行, 原来的面板和网站数据都能得到保留.  
 
 /www文件夹建议保存在volume卷中, /www/wwwroot建议映射到宿主机的目录下,方便上传网站代码等文件  
-如果是非root或者mac的用户,可能会遇到无法映射/wwwroot的问题,请自行把上面的/wwwroot的改成~/wwwroot即可
+每次启动容器后自动启动所有服务  
 
 如果还没有安装docker的请运行这个安装脚本(仅支持centos)  
 https://github.com/pch18/docker-baota/wiki/centos%E4%B8%8B-%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%ACdocker
