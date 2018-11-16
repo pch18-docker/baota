@@ -7,10 +7,10 @@
 正常的bridge模式可能会造成网站后台不能获取用户真实ip地址.
 
 ### 通过host模式运行宝塔镜像  
-`docker run -tid --name baota --net=host --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
+`docker run -tid --name baota --net=host --privileged=true --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 ### 如果特殊情况不能使用host网络模式, 或者容器运行后不能打开面板页面请删除容器后,使用如下命令以bridge网络模式运行  
-`docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 -p 20:20 -p 21:21 --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
+`docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 -p 20:20 -p 21:21 --privileged=true --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 ### 删除容器命令如下  
 `docker stop baota && docker rm baota`
