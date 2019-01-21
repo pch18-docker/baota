@@ -5,7 +5,7 @@ RUN cd /home \
     && echo y | bash install.sh \
     && bash /www/server/panel/install/install_soft.sh 1 install nginx 1.15 \
     && bash /www/server/panel/install/install_soft.sh 1 install mysql mariadb_10.3 \
-    && bash /www/server/panel/install/install_soft.sh 1 install php 7.3
+    && bash /www/server/panel/install/install_soft.sh 1 install php 7.2
     
 
 VOLUME ["/www","/www/wwwroot"]
