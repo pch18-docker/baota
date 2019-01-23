@@ -16,7 +16,6 @@
 `docker stop baota && docker rm baota`
 
 ### 镜像运行成功后,运行如下命令(二选一即可)查看初始化后的面板登录地址和初始账号密码信息  
-`docker logs -f -t --tail 10 baota`  
 `docker exec baota bt default`
 
 ### 版本命名说明  
