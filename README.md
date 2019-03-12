@@ -20,9 +20,12 @@
 
 ### 版本命名说明  
 `pch18/baota:latest` 或 `pch18/baota` 为最新版本的官方纯净安装的基础上安装nginx,mysql,php  
+`pch18/baota:init` 为引导镜像,用于自启动服务,持久化程序文件,其他版本均基于此镜像生成
 `pch18/baota:clear` 为官方版本纯净安装, 不默认安装nginx,mysql,php等程序  
-`pch18/baota:lnmp` 为官方版本纯净安装的基础上安装nginx,mysql,php  
 `pch18/baota:lnp` 为官方版本纯净安装的基础上安装nginx,php(不内置mysql,用于外置数据库的环境)  
+`pch18/baota:lnmp` 为官方版本纯净安装的基础上安装nginx,mysql,php  
+`pch18/baota:lap` 为官方版本纯净安装的基础上安装apache,php(不内置mysql,用于外置数据库的环境)  
+`pch18/baota:lamp` 为官方版本纯净安装的基础上安装apache,php
 
 
 安装完成后以后可以随时使用内置升级,升级到最新版本, 由于面板数据都保存在持久化的卷中, 即使删除容器后重新运行, 原来的面板和网站数据都能得到保留.  
