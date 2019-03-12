@@ -20,7 +20,7 @@
 
 ### 版本命名说明  
 `pch18/baota:latest` 或 `pch18/baota` 为最新版本的官方纯净安装的基础上安装nginx,mysql,php  
-`pch18/baota:init` 为引导镜像,用于自启动服务,持久化程序文件,其他版本均基于此镜像生成
+`pch18/baota:init` 为引导镜像,用于自启动服务,持久化程序文件,其他版本均基于此镜像生成  
 `pch18/baota:clear` 为官方版本纯净安装, 不默认安装nginx,mysql,php等程序  
 `pch18/baota:lnp` 为官方版本纯净安装的基础上安装nginx,php(不内置mysql,用于外置数据库的环境)  
 `pch18/baota:lnmp` 为官方版本纯净安装的基础上安装nginx,mysql,php  
