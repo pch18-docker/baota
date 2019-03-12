@@ -15,9 +15,9 @@
 ### 删除容器命令如下  
 `docker stop baota && docker rm baota`
 
-### 镜像运行成功后,请浏览器访问 http://{ip地址或主机域名}:8888 登录   
-用户名为 `username`   
-密码为   `password`   
+### 镜像运行成功后,请浏览器访问 http://`ip地址或主机域名`:8888 登录   
+登录用户名为 `username`   
+登录密码为   `password`   
 登录成功后请及时修改用户名和密码!!   
 
 ### 版本命名说明  
