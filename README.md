@@ -16,7 +16,7 @@
 `docker stop baota && docker rm baota`
 
 ### 镜像运行成功后,运行如下命令查看初始化后的面板登录地址和初始账号密码信息  
-docker exec baota bt default  
+`docker exec baota bt default`   
 
 ### 版本命名说明  
 `pch18/baota:latest` 或 `pch18/baota` 为最新版本的官方纯净安装的基础上安装nginx,mysql,php  
