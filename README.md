@@ -15,10 +15,8 @@
 ### 删除容器命令如下  
 `docker stop baota && docker rm baota`
 
-### 镜像运行成功后,请浏览器访问 http://`ip地址或主机域名`:8888 登录   
-登录用户名为 `username`   
-登录密码为   `password`   
-登录成功后请及时修改用户名和密码!!   
+### 镜像运行成功后,运行如下命令查看初始化后的面板登录地址和初始账号密码信息  
+docker exec baota bt default  
 
 ### 版本命名说明  
 `pch18/baota:latest` 或 `pch18/baota` 为最新版本的官方纯净安装的基础上安装nginx,mysql,php  
