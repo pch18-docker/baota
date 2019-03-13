@@ -1,4 +1,4 @@
-# 宝塔面板一键docker部署 by pch18
+# 宝塔面板一键docker部署 
 镜像为绑定github的dockerfile文件在dockerHub上自动生成,所以不可能有植入后台的行为,请放心使用.  
 镜像生成文件可以在github上查看.请大家监督.  
 制作这个纯粹是为了赚点github的关注量,好用之余请不要忘了去github加个Star一下哦,链接在最下方
