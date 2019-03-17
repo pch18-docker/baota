@@ -1,4 +1,5 @@
 FROM centos:7
+MAINTAINER pch18.cn
 
 #更新系统
 RUN yum -y update \
