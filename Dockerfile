@@ -17,4 +17,4 @@ RUN mkdir -p /www/letsencrypt \
 CMD /entrypoint.sh
 EXPOSE 8888 888 21 20 443 80
 
-HEALTHCHECK --interval=5s --timeout=3s CMD curl -fs http://localhost/ || exit 1 
+HEALTHCHECK --interval=5s --timeout=3s CMD wget -O /dev/null http://127.0.0.1:9091/ || exit 1 
