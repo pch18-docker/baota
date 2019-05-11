@@ -12,7 +12,10 @@ RUN mkdir -p /www/letsencrypt \
     && rm -f /etc/init.d \
     && mkdir /www/init.d \
     && ln -s /www/init.d /etc/init.d \
-    && chmod +x /entrypoint.sh
+    && chmod +x /entrypoint.sh \
+    && mkdir /www/wwwroot
+    
+WORKDIR /www/wwwroot
 
 CMD /entrypoint.sh
 EXPOSE 8888 888 21 20 443 80
