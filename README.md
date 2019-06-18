@@ -13,7 +13,7 @@
 `docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 -p 20:20 -p 21:21 --privileged=true --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 ### 删除容器命令如下  
-`docker stop baota && docker rm baota`
+`docker rm -fv baota && docker volumn rm baota_www`
 
 ### 镜像运行成功后,运行如下命令查看初始化后的面板登录地址和初始账号密码信息  
 `docker exec baota bt default`   
