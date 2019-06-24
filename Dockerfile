@@ -1,4 +1,4 @@
-FROM pch18/baota:_base6.0
+FROM pch18/baota:clear
 MAINTAINER pch18.cn
 
 RUN cd /www/server/panel \
