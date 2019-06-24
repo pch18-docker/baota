@@ -12,11 +12,12 @@ RUN mkdir -p /www/letsencrypt \
     && mkdir /www/wwwroot
     
 #更新系统 安装依赖 安装宝塔面板
-RUN yum -y update \
+RUN cd /home \
+    && yum -y update \
     && yum -y install wget openssh-server \
-    cd /home \
     && wget -O install.sh http://download.bt.cn/install/install_6.0.sh \
-    && echo y | bash install.sh 
+    && echo y | bash install.sh \
+    && echo '["linuxsys"]' > /www/server/panel/config/index.json
 
 WORKDIR /www/wwwroot
 CMD /entrypoint.sh
