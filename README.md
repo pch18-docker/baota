@@ -38,6 +38,6 @@
 https://github.com/pch18/docker-baota/wiki/centos%E4%B8%8B-%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%ACdocker
 
 好用请收藏加星支持一下,谢谢! 其他问题和建议请在github的issue里面交流.  
-github issue传送门: https://github.com/pch18/docker-baota/issues  
+github issue传送门: https://github.com/pch18-docker/baota/issues  
 dockerHub传送门: https://hub.docker.com/r/pch18/baota/  
 个人主页传送门: https://pch18.cn/index.php/2019/03/13/宝塔面板一键docker部署/
