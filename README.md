@@ -1,6 +1,5 @@
-# 近几天lnp,lap,lamp镜像可能有问题，正在抢修中。 --- 2019年6月25日
-## 近期升级镜像，由于未知原因，php的部分一直编译失败。安装上述镜像可能没有php。
-## 正在全力抢修中，无可奈何hub.docker.com的编译速度感人。造成困扰，敬请谅解。
+# 近几天镜像可能有问题，正在抢修中。 --- 2019年6月25日
+## hub.docker.com的编译速度感人。造成困扰，敬请谅解。
 
 
 # 宝塔面板一键docker部署 
@@ -12,13 +11,13 @@
 正常的bridge模式可能会造成网站后台不能获取用户真实ip地址.
 
 ### 通过host模式运行宝塔镜像  
-`docker run -tid --name baota --net=host --privileged=true --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
+`docker run -tid --name baota --net=host --privileged=true --restart always -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 ### 如果特殊情况不能使用host网络模式(macos和windows不支持host), 或者容器运行后不能打开面板页面请删除容器后,使用如下命令以bridge网络模式运行  
-`docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 -p 20:20 -p 21:21 --privileged=true --restart always -v baota_www:/www -v ~/wwwroot:/www/wwwroot pch18/baota`
+`docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 -p 20:20 -p 21:21 -p 3306:3306 --privileged=true --restart always -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 ### 删除容器命令如下  
-`docker rm -fv baota && docker volumn rm baota_www`
+`docker rm -fv baota`
 
 ### 镜像运行成功后,运行如下命令查看初始化后的面板登录地址和初始账号密码信息  
 `docker exec baota bt default`   
