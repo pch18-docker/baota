@@ -3,6 +3,8 @@ MAINTAINER pch18.cn
 
 #设置entrypoint和letsencrypt映射到www文件夹下持久化
 COPY entrypoint.sh /entrypoint.sh
+COPY set_default.py /set_default.py
+
 RUN mkdir -p /www/letsencrypt \
     && ln -s /www/letsencrypt /etc/letsencrypt \
     && rm -f /etc/init.d \
@@ -17,6 +19,7 @@ RUN cd /home \
     && yum -y install wget openssh-server \
     && wget -O install.sh http://download.bt.cn/install/install_6.0.sh \
     && echo y | bash install.sh \
+    && python /set_default.py \
     && echo '["linuxsys"]' > /www/server/panel/config/index.json
 
 WORKDIR /www/wwwroot
