@@ -5,14 +5,14 @@
 镜像生成文件可以在github上查看.请大家监督.  
 制作这个纯粹是为了赚点github的关注量,好用之余请不要忘了去github加个Star一下哦,链接在最下方
 
-### 通过bridge模式运行宝塔镜像  
+### 通过host模式运行宝塔镜像  
 `docker run -tid --name baota --net=host --privileged=true --restart always -v ~/wwwroot:/www/wwwroot pch18/baota`
 
 建议使用上述host网络模式启动,不需要设置映射端口,自动映射宝塔面板全端口到外网  
 正常的bridge模式可能会造成网站后台不能获取用户真实ip地址.
 
 
-###  通过host模式运行宝塔镜像  
+###  通过bridge模式运行宝塔镜像  
 **如果特殊情况不能使用host网络模式(macos和windows不支持host), 或者容器运行后不能打开面板页面请删除容器后,使用下述命令重新以bridge网络模式运行**
 
 `docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 --privileged=true --restart always -v ~/wwwroot:/www/wwwroot pch18/baota`
