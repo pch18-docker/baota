@@ -22,14 +22,15 @@
 请大家登陆后第一时间修改账号密码！！  
     
 ### 删除容器命令如下  
-`docker rm -fv baota && docker volumn rm baota_www`
+`docker rm -fv baota`
   
 ### 版本命名说明  
-`pch18/baota`或`pch18/baota:latest` 或`pch18/baota:lnmp`为最新版本的官方纯净安装的基础上安装nginx,mysql,php  
-`pch18/baota:lnp` 为官方版本纯净安装的基础上安装nginx,php(不内置mysql,用于外置数据库的环境)  
-`pch18/baota:lamp` 为官方版本纯净安装的基础上安装apache,php  
-`pch18/baota:lap` 为官方版本纯净安装的基础上安装apache,php(不内置mysql,用于外置数据库的环境)   
-`pch18/baota:clear` 为官方版本纯净安装, 不默认安装nginx,mysql,php等程序  
+[![](https://images.microbadger.com/badges/version/pch18/baota.svg)](https://microbadger.com/images/pch18/baota "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/pch18/baota.svg)](https://microbadger.com/images/pch18/baota "Get your own image badge on microbadger.com")`pch18/baota`或`pch18/baota:latest`等同`pch18/baota:lnmp`    
+[![](https://images.microbadger.com/badges/version/pch18/baota:lnmp.svg)](https://microbadger.com/images/pch18/baota:lnmp "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/pch18/baota:lnmp.svg)](https://microbadger.com/images/pch18/baota:lnmp "Get your own image badge on microbadger.com")`pch18/baota:lnmp`为最新版本的官方纯净安装的基础上安装nginx,mysql,php  
+[![](https://images.microbadger.com/badges/version/pch18/baota:lnp.svg)](https://microbadger.com/images/pch18/baota:lnp "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/pch18/baota:lnp.svg)](https://microbadger.com/images/pch18/baota:lnp "Get your own image badge on microbadger.com")`pch18/baota:lnp` 为官方版本纯净安装的基础上安装nginx,php(不内置mysql,用于外置数据库的环境)  
+[![](https://images.microbadger.com/badges/version/pch18/baota:lamp.svg)](https://microbadger.com/images/pch18/baota:lamp "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/pch18/baota:lamp.svg)](https://microbadger.com/images/pch18/baota:lamp "Get your own image badge on microbadger.com")`pch18/baota:lamp` 为官方版本纯净安装的基础上安装apache,php  
+[![](https://images.microbadger.com/badges/version/pch18/baota:lap.svg)](https://microbadger.com/images/pch18/baota:lap "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/pch18/baota:lap.svg)](https://microbadger.com/images/pch18/baota:lap "Get your own image badge on microbadger.com")`pch18/baota:lap` 为官方版本纯净安装的基础上安装apache,php(不内置mysql,用于外置数据库的环境)   
+[![](https://images.microbadger.com/badges/version/pch18/baota:clear.svg)](https://microbadger.com/images/pch18/baota:clear "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/pch18/baota:clear.svg)](https://microbadger.com/images/pch18/baota:clear "Get your own image badge on microbadger.com")`pch18/baota:clear` 为官方版本纯净安装, 不默认安装nginx,mysql,php等程序  
 
 /www文件夹建议保存在volume卷中, /www/wwwroot建议映射到宿主机的目录下,方便上传网站代码等文件  
 
