@@ -1,6 +1,6 @@
 ---
-name: 未来 建议
-about: 未来 建议
+name: 需求 建议
+about: 提出自己的需求建议, 会考虑在后续版本中加入.
 title: ''
 labels: 建议
 assignees: pch18
