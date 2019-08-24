@@ -13,10 +13,11 @@
 
 
 ###  通过bridge模式运行宝塔镜像  
-**如果特殊情况不能使用host网络模式(macos和windows不支持host), 或者容器运行后不能打开面板页面请删除容器后,使用下述命令重新以bridge网络模式运行**
+**如果特殊情况不能使用host网络模式(macos和windows不支持host), 使用下述命令重新以bridge网络模式运行**
 
 `docker run -tid --name baota -p 80:80 -p 443:443 -p 8888:8888 -p 888:888 --privileged=true --restart always -v ~/wwwroot:/www/wwwroot pch18/baota`
 
+###  登录方式  
 - 登陆地址 `http://{{面板ip地址}}:8888`
 - 初始账号 `username`
 - 初始密码 `password`
