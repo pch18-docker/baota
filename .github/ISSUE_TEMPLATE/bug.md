@@ -1,6 +1,6 @@
 ---
 name: Bug 反馈
-about: Bug 反馈
+about: 程序遇到故障不能运行? 部分功能不可用? 欢迎反馈! 
 title: ''
 labels: Bug
 assignees: pch18
