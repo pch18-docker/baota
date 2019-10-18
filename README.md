@@ -43,8 +43,8 @@
 原来的面板和网站数据都能得到保留.  
 启动容器时自动启动所有服务 
 
-如果还没有安装docker的请运行这个安装脚本(仅支持centos)  
-https://github.com/pch18/docker-baota/wiki/centos%E4%B8%8B-%E5%AE%89%E8%A3%85%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%ACdocker
+如果还没有安装docker的请运行这个安装脚本
+https://pch18.cn/archives/install_docker.html
 
 好用请收藏加星支持一下,谢谢! 其他问题和建议请在github的issue里面交流.  
 github issue传送门: https://github.com/pch18-docker/baota/issues  
