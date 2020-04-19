@@ -21,7 +21,8 @@ RUN cd /home \
     && wget -O install.sh http://download.bt.cn/install/install_6.0.sh \
     && echo y | bash install.sh \
     && python /set_default.py \
-    && echo '["linuxsys", "webssh"]' > /www/server/panel/config/index.json
+    && echo '["linuxsys", "webssh"]' > /www/server/panel/config/index.json \
+    && yum clean all
 
 WORKDIR /www/wwwroot
 CMD /entrypoint.sh
